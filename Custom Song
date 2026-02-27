@@ -1,1 +1,164 @@
+use_bpm 64
+use_synth :saw
 
+define :measure35 do
+  play :a4
+  sleep 0.25
+  play :f3
+  sleep 0.25
+  play :bb3
+  sleep 0.25
+  play :c4
+  sleep 0.25
+  play :e4
+  sleep 0.25
+  play :f4
+  sleep 0.25
+  play :e4
+  sleep 0.25
+  play :c4
+  sleep 0.25
+  play :bb3
+  sleep 0.25
+  play :f5
+  sleep 0.25
+end
+
+live_loop :measureone do
+  2.times do
+    play :f3
+    sleep 0.25
+    play :bb3
+    sleep 0.25
+    play :c4
+    sleep 0.25
+    play :e4
+    sleep 0.25
+    play :f4
+    sleep 0.25
+    play :e4
+    sleep 0.25
+    play :c4
+    sleep 0.25
+    play :bb3
+    sleep 0.25
+  end
+  stop
+end
+
+sleep 4
+
+live_loop :measuretwo do
+  1.times do
+    play :f3
+    sleep 0.25
+    play :bb3
+    sleep 0.25
+    play :c4
+    sleep 0.25
+    play :e4
+    sleep 0.25
+    play :f4
+    sleep 0.25
+    play :e4
+    sleep 0.25
+    play :c4
+    sleep 0.25
+    play :bb3
+    sleep 0.25
+    play :f3
+    sleep 0.25
+    play :bb3
+    sleep 0.25
+    play :c4
+    sleep 0.25
+    play :e4
+    sleep 0.25
+    play :f4
+    sleep 0.25
+    play :e4
+    sleep 0.25
+    play :a4
+    sleep 0.5
+    play :f5
+    sleep 0.5
+    play :c4
+    sleep 0.25
+    play :bb3
+    sleep 0.25
+  end
+  stop
+end
+
+sleep 5
+
+with_synth :saw do
+  measure35
+end
+
+live_loop :measurefour do
+  1.times do
+    play :f3
+    sleep 0.25
+    play :bb3
+    sleep 0.25
+    play :c4
+    sleep 0.25
+    play :e4
+    sleep 0.25
+    play :f4
+    sleep 0.25
+    play :e4
+    sleep 0.25
+    play :c4
+    sleep 0.25
+    play :bb3
+    sleep 0.25
+    play :f3
+    sleep 0.25
+    play :bb3
+    sleep 0.25
+    play :c4
+    sleep 0.25
+    play :e4
+    sleep 0.25
+    play :a4
+    sleep 0.25
+    play :f5
+    sleep 0.25
+    play :f4
+    sleep 0.25
+    play :e4
+    sleep 0.25
+    play :c4
+    sleep 0.25
+    play :bb3
+    sleep 0.25
+    stop
+  end
+end
+
+sleep 4.5
+
+with_synth :saw do
+  measure35
+end
+
+live_loop :measuresix do
+  play :f3
+  sleep 0.25
+  play :bb3
+  sleep 0.25
+  play :c4
+  sleep 0.25
+  play :e4
+  sleep 0.25
+  play :f4
+  sleep 0.25
+  play :e4
+  sleep 0.25
+  play :c4
+  sleep 0.25
+  play :bb3
+  sleep 0.25
+end
